@@ -7,7 +7,7 @@ O template consiste em uma arquitetura básica onde dentro do main.py, há 1 api
 
 Dentro do use-case, é onde o prompt precisará ser montado, e após essa montagem, se comunicar via sdk com o gemini que irá gerar a resposta ou retornar algum erro.
 
-![exercicio drawio](https://github.com/citggp-gp-labs/python-genai-project-template/assets/126102622/c3105e4e-d150-4bf1-9e88-483de9ce3991)
+![exercicio drawio (1)](https://github.com/citggp-gp-labs/python-genai-project-template/assets/126102622/e6909ddf-445e-4987-8c8c-e656c5c2f06f)
 
 ## Iniciar ambiente local
 
