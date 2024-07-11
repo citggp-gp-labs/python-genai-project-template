@@ -67,4 +67,6 @@ curl -H "Content-Type: application/json" -H "Authorization: Bearer $(gcloud auth
 
 ## Informações extra
 
-Não é possível acessar diretamente o endpoint do cloud run, pois não há ingress público. Para acessar o serviço foi criado [Load Balance](https://console.cloud.google.com/net-services/loadbalancing/details/httpAdvanced/app-vertex-ai?project=poc-vibrancy-vertexai) disponível no host [http://34.128.131.116](http://34.128.131.116).
+![exercicio drawio](https://github.com/citggp-gp-labs/python-genai-project-template/assets/126102622/c3105e4e-d150-4bf1-9e88-483de9ce3991)
+
+
