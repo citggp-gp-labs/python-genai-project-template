@@ -6,8 +6,17 @@ import logging
 
 # Create your own schema and add to the generation config model
 # using the parameter response_schema=response_schema
+# the following example show be updated to your context
 response_schema = {
-
+    "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "recipe_name": {"type": "string"},
+                "calories": {"type": "integer"}
+            },
+            "required": ["recipe_name"]
+    },
 }
 
 class GeminiPro:
