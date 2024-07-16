@@ -43,8 +43,3 @@ def unified_categorization_v2():
     data = request.json
     logging.debug("Received request: %s", data)
     return use_case.run(data, csv_file)
-
-@app.route('/api/docs')
-def get_docs():
-    print('sending docs')
-    return render_template('swaggerui.html')

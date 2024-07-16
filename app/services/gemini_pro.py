@@ -1,8 +1,14 @@
 import os
 import vertexai
-from vertexai.generative_models import GenerativeModel
+from vertexai.generative_models import GenerativeModel, GenerationConfig
 import vertexai.generative_models as generative_models
 import logging
+
+# Create your own schema and add to the generation config model
+# using the parameter response_schema=response_schema
+response_schema = {
+
+}
 
 class GeminiPro:
     DEFAULT_MODEL = os.getenv('DEFAULT_MODEL_VERSION')
@@ -14,7 +20,11 @@ class GeminiPro:
         vertexai.init(project=project, location=location)
         self.project = project
         self.location = location
-        self.model = GenerativeModel(model)
+        self.model = GenerativeModel(
+            model_name=model, 
+            generation_config=GenerationConfig(
+                response_mime_type="application/json",
+                response_schema=response_schema))
 
     def gemini_pro(self, prompt: str, temperature: float = TEMPERATURE, top_p: float = TOP_P,
                    max_output_tokens: int = MAX_OUTPUT_TOKENS):
